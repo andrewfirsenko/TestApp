@@ -1,0 +1,30 @@
+PODS:
+  - CSwiftLog (1.0.1)
+  - SDWebImage (5.12.0):
+    - SDWebImage/Core (= 5.12.0)
+  - SDWebImage/Core (5.12.0)
+  - SkeletonView (1.25.1)
+  - SwiftGen (6.5.1)
+
+DEPENDENCIES:
+  - CSwiftLog
+  - SDWebImage
+  - SkeletonView
+  - SwiftGen
+
+SPEC REPOS:
+  trunk:
+    - CSwiftLog
+    - SDWebImage
+    - SkeletonView
+    - SwiftGen
+
+SPEC CHECKSUMS:
+  CSwiftLog: 3fcd88ca59ed6a7a9fba0099fcb4037b642ce662
+  SDWebImage: 4ea20cca2986adc5aacde07aa686742fd4c67a37
+  SkeletonView: 77079530e1348a72f48b79ae30dcb966c1b18b6a
+  SwiftGen: a6d22010845f08fe18fbdf3a07a8e380fd22e0ea
+
+PODFILE CHECKSUM: 38ddaecae62a8cd90cfc0ec2fc1def59f905f589
+
+COCOAPODS: 1.11.2

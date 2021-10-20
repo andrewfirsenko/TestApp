@@ -1,13 +1,13 @@
 platform :ios, '10.0'
 
 target 'TestApp' do
-
+  
   # Pods for TestApp
   pod 'SwiftGen'
   pod 'CSwiftLog'
   
   pod 'SkeletonView'
-  pod 'SDWebImage'
+  pod 'SDWebImage', :modular_headers => true
 
 end
 

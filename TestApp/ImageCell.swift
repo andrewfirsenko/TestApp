@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SDWebImage
+import CSwiftLog
 
 class ImageCell: UICollectionViewCell {
     
@@ -13,28 +15,49 @@ class ImageCell: UICollectionViewCell {
         return String(describing: self)
     }
     
+    private(set) var wasLoad: Bool = false
+    
     private lazy var imageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        imageView.isUserInteractionEnabled = false
-        imageView.image = Asset.Image.warningLoadImage.image
-        return imageView
-    }()
+        $0.contentMode = .scaleAspectFill
+        $0.isUserInteractionEnabled = false
+        $0.isSkeletonable = true
+        $0.image = nil
+        return $0
+    }(UIImageView())
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        contentView.addSubview(imageView)
+        self.isSkeletonable = true
+        self.contentView.isSkeletonable = true
+        self.contentView.backgroundColor = Asset.Color.skeletonFirst.color10
+        self.contentView.addSubview(imageView)
+    }
+    
+    // MARK: Load Image
+    func loadImage(_ stringUrl: String) {
+        imageView.image = nil
+        wasLoad = false
+        
+        imageView.sd_setImage(with: URL(string: stringUrl), completed: { [weak self] img, error, cache, url in
+            if let error = error {
+                Log.ui.log("Load image: \(error.localizedDescription)", .warning)
+                self?.imageView.image = Asset.Image.warningLoadImage.image
+            }
+            self?.wasLoad = true
+        })
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        var frame = imageView.frame
-        frame.size.height = self.frame.size.height
-        frame.size.width = self.frame.size.width
-        frame.origin.x = 0
-        frame.origin.y = 0
-        imageView.frame = frame
+        imageView.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView.sd_cancelCurrentImageLoad()
+        imageView.image = nil
+        wasLoad = false
     }
     
     required init?(coder aDecoder: NSCoder) {

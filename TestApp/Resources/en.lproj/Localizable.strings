@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  TestApp
+
+  Created by Andrew on 20.10.2021.
+  
+*/
+
+EmptyText = "It's empty";

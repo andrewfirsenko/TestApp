@@ -4,12 +4,12 @@
 input_dir: TestApp/Resources/
 output_dir: TestApp/Resources/
 
-#strings:
-#  inputs:
-#    - Strings/en.lproj
-#  outputs:
-#    - templateName: structured-swift5
-#      output: Generated/Strings+Generated.swift
+strings:
+  inputs:
+    - en.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: Generated/Strings+Generated.swift
 
 xcassets:
   inputs:

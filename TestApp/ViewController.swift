@@ -39,12 +39,12 @@ class ViewController: UIViewController {
     }()
     
     private lazy var emptyLabel: UILabel = {
-        $0.text = "Тут пока пусто"
+        $0.text = L10n.emptyText
         $0.backgroundColor = .clear
         $0.textColor = .black
         $0.textAlignment = .center
         $0.font = UIFont.systemFont(ofSize: 24)
-//        $0.isHidden = true
+        $0.isHidden = true
         return $0
     }(UILabel())
 
@@ -73,7 +73,6 @@ class ViewController: UIViewController {
     }
     
     private func fetchData(_ animated: Bool = false) {
-        data.removeAll()
         if animated {
             startAnimationSkeleton()
         }
@@ -142,7 +141,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout, SkeletonCollection
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        guard let cell = cell as? ImageCell, data.count > indexPath.count else {
+        guard let cell = cell as? ImageCell, data.count > indexPath.item else {
             return
         }
         cell.loadImage(data[indexPath.item])

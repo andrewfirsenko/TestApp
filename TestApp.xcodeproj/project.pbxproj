@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		495E110027206A5D00505196 /* DeleteFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495E10FF27206A5D00505196 /* DeleteFlowLayout.swift */; };
+		495E11182720836E00505196 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 495E111A2720836E00505196 /* Localizable.strings */; };
+		495E111F272083EE00505196 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495E111E272083EE00505196 /* Strings+Generated.swift */; };
 		499CE286271F25A300190E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CE285271F25A300190E14 /* AppDelegate.swift */; };
 		499CE28A271F25A300190E14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CE289271F25A300190E14 /* ViewController.swift */; };
 		499CE28F271F25A400190E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499CE28E271F25A400190E14 /* Assets.xcassets */; };
@@ -24,6 +26,9 @@
 /* Begin PBXFileReference section */
 		3239F27263AF44162C702A5D /* libPods-TestApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		495E10FF27206A5D00505196 /* DeleteFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFlowLayout.swift; sourceTree = "<group>"; };
+		495E11192720836E00505196 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		495E111C2720837E00505196 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		495E111E272083EE00505196 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		499CE282271F25A300190E14 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499CE285271F25A300190E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		499CE289271F25A300190E14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +114,7 @@
 				499CE2AF271F2B6200190E14 /* Generated */,
 				499CE290271F25A400190E14 /* LaunchScreen.storyboard */,
 				499CE28E271F25A400190E14 /* Assets.xcassets */,
+				495E111A2720836E00505196 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -116,6 +122,7 @@
 		499CE2AF271F2B6200190E14 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				495E111E272083EE00505196 /* Strings+Generated.swift */,
 				499CE2BB271F3B1400190E14 /* DefaultColorsGenerated.swift */,
 				499CE2B3271F2C0000190E14 /* XCAssets+Generated.swift */,
 			);
@@ -200,6 +207,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 499CE279271F25A300190E14;
 			productRefGroup = 499CE283271F25A300190E14 /* Products */;
@@ -217,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				499CE292271F25A400190E14 /* LaunchScreen.storyboard in Resources */,
+				495E11182720836E00505196 /* Localizable.strings in Resources */,
 				499CE28F271F25A400190E14 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				495E111F272083EE00505196 /* Strings+Generated.swift in Sources */,
 				499CE2B4271F2C0000190E14 /* XCAssets+Generated.swift in Sources */,
 				49BCADCD271F73C40008C52E /* UIView+Extension.swift in Sources */,
 				499CE2C0271F3B4F00190E14 /* ColorAsset+iOS10.swift in Sources */,
@@ -304,6 +314,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		495E111A2720836E00505196 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				495E11192720836E00505196 /* en */,
+				495E111C2720837E00505196 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		499CE290271F25A400190E14 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -319,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -380,6 +400,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

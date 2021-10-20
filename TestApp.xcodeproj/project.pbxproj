@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		495E110027206A5D00505196 /* DeleteFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495E10FF27206A5D00505196 /* DeleteFlowLayout.swift */; };
 		499CE286271F25A300190E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CE285271F25A300190E14 /* AppDelegate.swift */; };
 		499CE28A271F25A300190E14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CE289271F25A300190E14 /* ViewController.swift */; };
 		499CE28F271F25A400190E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499CE28E271F25A400190E14 /* Assets.xcassets */; };
@@ -14,11 +15,15 @@
 		499CE2B4271F2C0000190E14 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CE2B3271F2C0000190E14 /* XCAssets+Generated.swift */; };
 		499CE2BC271F3B1400190E14 /* DefaultColorsGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CE2BB271F3B1400190E14 /* DefaultColorsGenerated.swift */; };
 		499CE2C0271F3B4F00190E14 /* ColorAsset+iOS10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CE2BF271F3B4F00190E14 /* ColorAsset+iOS10.swift */; };
+		49BCADC5271F66980008C52E /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BCADC4271F66980008C52E /* ImageCell.swift */; };
+		49BCADCD271F73C40008C52E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BCADCC271F73C40008C52E /* UIView+Extension.swift */; };
+		49BCADD4271F79BA0008C52E /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BCADD3271F79BA0008C52E /* Animator.swift */; };
 		6A540C337F1EC5E61554EB16 /* libPods-TestApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3239F27263AF44162C702A5D /* libPods-TestApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3239F27263AF44162C702A5D /* libPods-TestApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		495E10FF27206A5D00505196 /* DeleteFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFlowLayout.swift; sourceTree = "<group>"; };
 		499CE282271F25A300190E14 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499CE285271F25A300190E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		499CE289271F25A300190E14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +34,9 @@
 		499CE2B8271F39A400190E14 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		499CE2BB271F3B1400190E14 /* DefaultColorsGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultColorsGenerated.swift; sourceTree = "<group>"; };
 		499CE2BF271F3B4F00190E14 /* ColorAsset+iOS10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorAsset+iOS10.swift"; sourceTree = "<group>"; };
+		49BCADC4271F66980008C52E /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		49BCADCC271F73C40008C52E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		49BCADD3271F79BA0008C52E /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		EB53FF172D87816297FAC191 /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
 		FC4B7BCFE815D113DBDB7E3F /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,8 +92,10 @@
 		499CE284271F25A300190E14 /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				49BCADCF271F78730008C52E /* Animator */,
 				499CE285271F25A300190E14 /* AppDelegate.swift */,
 				499CE289271F25A300190E14 /* ViewController.swift */,
+				49BCADC4271F66980008C52E /* ImageCell.swift */,
 				499CE2BE271F3B2A00190E14 /* Helper */,
 				499CE2AE271F2ACC00190E14 /* Resources */,
 				499CE293271F25A400190E14 /* Info.plist */,
@@ -132,8 +142,18 @@
 			isa = PBXGroup;
 			children = (
 				499CE2BF271F3B4F00190E14 /* ColorAsset+iOS10.swift */,
+				49BCADCC271F73C40008C52E /* UIView+Extension.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		49BCADCF271F78730008C52E /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				49BCADD3271F79BA0008C52E /* Animator.swift */,
+				495E10FF27206A5D00505196 /* DeleteFlowLayout.swift */,
+			);
+			path = Animator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,10 +290,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				499CE2B4271F2C0000190E14 /* XCAssets+Generated.swift in Sources */,
+				49BCADCD271F73C40008C52E /* UIView+Extension.swift in Sources */,
 				499CE2C0271F3B4F00190E14 /* ColorAsset+iOS10.swift in Sources */,
 				499CE2BC271F3B1400190E14 /* DefaultColorsGenerated.swift in Sources */,
+				495E110027206A5D00505196 /* DeleteFlowLayout.swift in Sources */,
 				499CE28A271F25A300190E14 /* ViewController.swift in Sources */,
+				49BCADD4271F79BA0008C52E /* Animator.swift in Sources */,
 				499CE286271F25A300190E14 /* AppDelegate.swift in Sources */,
+				49BCADC5271F66980008C52E /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

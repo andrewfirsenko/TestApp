@@ -15,8 +15,7 @@ extension ColorAsset {
         get {
             if #available(iOS 11, *) {
                 return self.color
-            }
-            else {
+            } else {
                 return _defaultColors[name] ?? ColorAsset.defaultColor10
             }
         }
